@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Trang Chủ - Kế Toán 24h</title>
+  <title>Liên Hệ - Kế Toán 24h</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
-  <style>
+    <style>
     .main-nav-bar ul li a {
       color: #1f365c;
       font-weight: bold;
@@ -39,8 +41,7 @@
 </head>
 
 <body>
-
-  <div class="top-bar">
+   <div class="top-bar">
     <div class="container">
       <div class="top-left">
         <span><i class="fa fa-clock-o"></i> Làm việc: Thứ 2 - Thứ 7: 7AM - 5PM</span>
@@ -75,10 +76,10 @@
             <a href="index.html"><i class="fa fa-home"></i> Trang chủ</a>
           </li>
           <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a>
+            <a href="services.html"><i class="fa fa-address-card"></i> Giới Thiệu</a>
           </li>
           <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a>
+            <a href="#"><i class="fa fa-folder-open"></i> Dịch Vụ</a>
           </li>
           <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
             <a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a>
@@ -94,11 +95,15 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="contact">
     <div class="container">
-      <h2>Dịch vụ kế toán chuyên nghiệp</h2>
-      <p>Giúp doanh nghiệp tối ưu chi phí, minh bạch sổ sách và đúng pháp luật</p>
-      <a href="services.html" class="btn">Xem dịch vụ</a>
+      <h2>Liên hệ với chúng tôi</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Nội dung..." rows="5"></textarea>
+        <button type="submit">Gửi</button>
+      </form>
     </div>
   </section>
 
@@ -110,8 +115,6 @@
       document.getElementById('footer-placeholder').innerHTML = html;
     });
 </script>
-
-
 </body>
 
 </html>
