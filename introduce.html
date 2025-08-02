@@ -1,115 +1,464 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Trang Chủ - Kế Toán 24h</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://agnes-cdn.kiwiar.com/website/js/npm/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    .main-nav-bar ul li a {
-      color: #1f365c;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-      align-items: center;
-      gap: 8px;
-    }
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .main-nav-bar ul li a {
+            color: #1f365c;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .main-nav-bar ul li {
-      transition: border-color 0.2s;
-    }
+        .main-nav-bar ul li {
+            transition: border-color 0.2s;
+        }
 
-    .main-nav-bar ul li:last-child {
-      border-right: none;
-    }
+        .main-nav-bar ul li:last-child {
+            border-right: none;
+        }
 
-    .main-nav-bar ul li a:hover {
-      color: #ffb536;
-    }
+        .main-nav-bar ul li a:hover {
+            color: #ffb536;
+        }
 
-    .hotline span:last-child {
-      font-size: 38px;
-      color: #1f365c;
-      font-weight: bold;
-    }
-  </style>
+        .hotline span:last-child {
+            font-size: 38px;
+            color: #1f365c;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-left">
-        <span><i class="fa fa-clock-o"></i> Làm việc: Thứ 2 - Thứ 7: 7AM - 5PM</span>
-        <span><i class="fa fa-map-marker"></i> Thành Phố Tuyên Quang</span>
-      </div>
-      <div class="top-right">
-        <a href="https://www.facebook.com/" target="_blank" class="facebook" title="Facebook"><i
-            class="fa fa-facebook"></i></a>
-        <a href="#" target="_blank" class="linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="https://dichvuketoan24h.com/feed" target="_blank" class="rss" title="RSS"><i class="fa fa-rss"></i></a>
-        <a href="#" target="_blank" class="youtube" title="YouTube"><i class="fa fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <header>
-    <div class="container">
-      <div class="branding-row"
-        style="display: flex; align-items: center; justify-content: space-between; padding: 30px 0;">
-        <div class="branding" style="display: flex; align-items: center;">
-          <h1 class="logo">Kế Toán 24h</h1>
+    <!-- Top bar -->
+    <div class="bg-[#1f365c] text-white text-sm py-2">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4">
+            <div>
+                <span><i class="fa fa-clock-o"></i> Làm việc: Thứ 2 - Thứ 7: 7AM - 5PM</span>
+                <span class="ml-4"><i class="fa fa-map-marker"></i> Thành Phố Tuyên Quang</span>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/" target="_blank" class="mx-1"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank" class="mx-1"><i class="fa fa-linkedin"></i></a>
+                <a href="https://dichvuketoan24h.com/feed" target="_blank" class="mx-1"><i class="fa fa-rss"></i></a>
+                <a href="#" target="_blank" class="mx-1"><i class="fa fa-youtube"></i></a>
+            </div>
         </div>
-        <div class="hotline" style="text-align: right;">
-          <span style="font-size: 17px; color: #ffb536;">Tư Vấn Miễn Phí!</span><br>
-          <span style="font-size: 38px; color: #1f365c; font-weight: bold;">0911 553 699</span>
+    </div>
+    <!-- Header -->
+    <header class="bg-white w-full shadow">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6">
+            <div class="text-2xl font-bold text-[#1f365c]">Kế Toán 24h</div>
+            <div class="text-right">
+                <span class="block text-[#ffb536] text-base">Tư Vấn Miễn Phí!</span>
+                <span class="block text-[#1f365c] text-3xl font-bold">0911 553 699</span>
+            </div>
         </div>
-      </div>
-      <nav class="main-nav-bar">
-        <ul
-          style="display: flex; justify-content: center; align-items: center; list-style: none; padding: 0; margin: 0;">
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="index.html"><i class="fa fa-home"></i> Trang chủ</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a>
-          </li>
-          <li style="padding: 0 30px;">
-            <a href="contact.html"><i class="fa fa-phone-square"></i> Liên hệ</a>
-          </li>
-          <li style="padding: 0 30px; color: #888;">
-            Tìm Kiếm
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Navigation bar -->
+        <nav class="bg-white border-t">
+            <ul
+                class="flex justify-center items-center max-w-7xl mx-auto px-4 py-2 space-x-8 text-[#1f365c] font-bold text-base">
+                <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li><a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a></li>
+                <li><a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a></li>
+                <li><a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+                <li><a href="contact.html"><i class="fa fa-phone-square"></i> Liên hệ</a></li>
+                <li class="text-[#888]">Tìm Kiếm</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="max-w-7xl mx-auto px-4 py-12 w-full">
+        <!-- Header -->
+        <header class="w-full max-w-6xl mx-auto py-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 text-center mb-4">
+                Quản lý tài chính hiệu quả cho Doanh nghiệp & Hộ kinh doanh
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-gray-600 text-center">
+                Giải pháp tối ưu từ TCP Accounting
+            </h2>
+        </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Dịch vụ kế toán chuyên nghiệp</h2>
-      <p>Giúp doanh nghiệp tối ưu chi phí, minh bạch sổ sách và đúng pháp luật</p>
-      <a href="services.html" class="btn">Xem dịch vụ</a>
-    </div>
-  </section>
+        <!-- Slide Content -->
+        <main class="w-full max-w-6xl mx-auto px-4 pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Column 1: Challenges -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-lg flex flex-col">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/hbyb9pUo.jpg"
+                        alt="Business Owner Finances" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-sky-700 mb-3">
+                        <span class="bg-sky-100 text-sky-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">THÁCH
+                            THỨC</span>
+                    </h3>
+                    <ul class="text-slate-600 space-y-3 text-base flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-sky-500 mr-2 mt-1">gavel</span>
+                            <span><strong class="font-semibold text-slate-700">Phức tạp về pháp lý:</strong> Quy định
+                                thuế, kế toán liên tục thay đổi, đòi hỏi cập nhật và chuyên môn sâu.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-sky-500 mr-2 mt-1">warning</span>
+                            <span><strong class="font-semibold text-slate-700">Rủi ro sai sót:</strong> Sai lệch dữ
+                                liệu, báo cáo không chính xác có thể dẫn đến phạt hành chính nghiêm trọng.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-sky-500 mr-2 mt-1">sync_problem</span>
+                            <span><strong class="font-semibold text-slate-700">Gánh nặng nguồn lực:</strong> Tiêu tốn
+                                thời gian, công sức và chi phí lớn cho đội ngũ kế toán nội bộ.</span>
+                        </li>
+                    </ul>
+                </div>
 
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
-</script>
+                <!-- Column 2: Importance -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-lg flex flex-col">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/CTQwxLgr.jpg"
+                        alt="Tax Compliance Icon" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-emerald-700 mb-3">
+                        <span
+                            class="bg-emerald-100 text-emerald-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">TẦM
+                            QUAN TRỌNG</span>
+                    </h3>
+                    <ul class="text-slate-600 space-y-3 text-base flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-emerald-500 mr-2 mt-1">verified_user</span>
+                            <span><strong class="font-semibold text-slate-700">Tuân thủ pháp luật:</strong> Đảm bảo hoạt
+                                động kinh doanh hợp pháp, minh bạch, tránh rủi ro pháp lý.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-emerald-500 mr-2 mt-1">trending_up</span>
+                            <span><strong class="font-semibold text-slate-700">Tối ưu chi phí:</strong> Giảm thiểu nghĩa
+                                vụ thuế, quản lý dòng tiền hiệu quả, nâng cao lợi nhuận.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-emerald-500 mr-2 mt-1">assessment</span>
+                            <span><strong class="font-semibold text-slate-700">Cơ sở ra quyết định:</strong> Cung cấp
+                                thông tin tài chính chính xác cho các quyết định chiến lược.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solution -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-lg flex flex-col">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/c6Nfo22m.jpg"
+                        alt="Financial Consulting Team" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold text-indigo-700 mb-3">
+                        <span
+                            class="bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">GIẢI
+                            PHÁP</span>
+                    </h3>
+                    <ul class="text-slate-600 space-y-3 text-base flex-grow">
+                        <li class="flex items-start">
+                            <span class="material-icons text-indigo-500 mr-2 mt-1">school</span>
+                            <span><strong class="font-semibold text-slate-700">Chuyên môn sâu rộng:</strong> Tiếp cận
+                                kiến thức, kinh nghiệm từ các chuyên gia hàng đầu.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-indigo-500 mr-2 mt-1">savings</span>
+                            <span><strong class="font-semibold text-slate-700">Tiết kiệm nguồn lực:</strong> Giảm gánh
+                                nặng quản lý, tập trung vào hoạt động kinh doanh cốt lõi.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons text-indigo-500 mr-2 mt-1">shield</span>
+                            <span><strong class="font-semibold text-slate-700">Giảm thiểu rủi ro:</strong> Đảm bảo báo
+                                cáo chính xác, tuân thủ quy định và cập nhật pháp luật.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 py-12 w-full">
+        <div class="slide">
+            <div class="w-full mb-6">
+                <h1 class="text-4xl font-bold text-center text-gray-800">Tại sao nên chọn dịch vụ của chúng tôi?</h1>
+            </div>
+
+            <div class="flex flex-1 items-start">
+                <!-- Left Column: Image -->
+                <div class="w-2/5 flex items-center justify-center h-full pr-8">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/8fohjtbA.png"
+                        alt="Professional Accountant Illustration" class="object-contain max-h-[450px] rounded-lg">
+                </div>
+
+                <!-- Right Column: Content Blocks -->
+                <div class="w-3/5 flex flex-col justify-center space-y-4">
+
+                    <!-- Block 1: Experienced Team -->
+                    <div class="flex items-start">
+                        <span class="material-icons text-4xl text-blue-900 mt-1">engineering</span>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-900 mb-2"><span
+                                    class="bg-blue-100 text-blue-900 px-3 py-1 rounded-md">Chuyên Gia Tận Tâm & Kinh
+                                    Nghiệm</span></h3>
+                            <p class="text-gray-600 text-base leading-relaxed">Đội ngũ chuyên gia có chứng chỉ, giàu
+                                kinh nghiệm thực tiễn, luôn đặt lợi ích khách hàng lên hàng đầu và cam kết chất lượng
+                                dịch vụ.</p>
+                        </div>
+                    </div>
+
+                    <!-- Block 2: Professional Process -->
+                    <div class="flex items-start">
+                        <span class="material-icons text-4xl text-blue-900 mt-1">verified_user</span>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-900 mb-2"><span
+                                    class="bg-green-100 text-green-900 px-3 py-1 rounded-md">Quy Trình Chuẩn & Bảo
+                                    Mật</span></h3>
+                            <p class="text-gray-600 text-base leading-relaxed">Áp dụng quy trình làm việc khoa học, minh
+                                bạch, sử dụng công nghệ hiện đại và cam kết bảo mật tuyệt đối dữ liệu của khách hàng.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: Continuous Updates -->
+                    <div class="flex items-start">
+                        <span class="material-icons text-4xl text-blue-900 mt-1">update</span>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-900 mb-2"><span
+                                    class="bg-yellow-100 text-yellow-900 px-3 py-1 rounded-md">Cập Nhật Pháp Luật Liên
+                                    Tục</span></h3>
+                            <p class="text-gray-600 text-base leading-relaxed">Luôn nắm bắt kịp thời các thay đổi trong
+                                chính sách thuế và kế toán để tư vấn chính xác, giúp doanh nghiệp tuân thủ và tối ưu lợi
+                                ích.</p>
+                        </div>
+                    </div>
+
+                    <!-- Block 4: Flexible Solutions -->
+                    <div class="flex items-start">
+                        <span class="material-icons text-4xl text-blue-900 mt-1">handshake</span>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-xl text-blue-900 mb-2"><span
+                                    class="bg-purple-100 text-purple-900 px-3 py-1 rounded-md">Giải Pháp Linh Hoạt & Tùy
+                                    Biến</span></h3>
+                            <p class="text-gray-600 text-base leading-relaxed">Cung cấp các gói dịch vụ đa dạng, phù hợp
+                                với mọi quy mô từ startup đến doanh nghiệp lớn, đồng hành cùng sự phát triển của bạn.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Appended Content Card -->
+            <div class="mt-auto pt-6">
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 w-full">
+                    <h3 class="flex items-center text-xl font-bold text-blue-900 mb-3">
+                        <span class="material-icons text-3xl mr-2">stars</span>
+                        Giá trị vượt trội của chúng tôi
+                    </h3>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 text-center">
+                        <div class="bg-white p-3 rounded-lg border flex items-center justify-center">
+                            <span class="material-icons text-blue-600 mr-2">star</span>
+                            <span class="font-semibold text-gray-700 text-sm">Lợi Ích Kinh Tế</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border flex items-center justify-center">
+                            <span class="material-icons text-red-600 mr-2">shield</span>
+                            <span class="font-semibold text-gray-700 text-sm">Giảm Thiểu Rủi Ro</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border flex items-center justify-center">
+                            <span class="material-icons text-green-600 mr-2">track_changes</span>
+                            <span class="font-semibold text-gray-700 text-sm">Tập Trung Cốt Lõi</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg border flex items-center justify-center">
+                            <span class="material-icons text-purple-600 mr-2">support_agent</span>
+                            <span class="font-semibold text-gray-700 text-sm">Hỗ Trợ Liên Tục</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12 w-full">
+        <div class="slide flex flex-col" style="background-color: #f8fafc;">
+            <div class="w-full">
+                <h1 class="text-4xl font-bold text-slate-800">Cam kết chất lượng và hỗ trợ khách hàng</h1>
+                <p class="text-center text-2xl font-semibold text-slate-700 mt-4">"Chúng tôi đồng hành cùng sự phát
+                    triển bền vững của doanh nghiệp bạn!"</p>
+            </div>
+
+            <div class="flex-grow flex mt-6 gap-8">
+                <!-- Cột trái: Tư vấn chuyên sâu -->
+                <div class="w-1/2 flex flex-col bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <i class="material-icons text-4xl text-blue-600">support_agent</i>
+                        <h2 class="text-2xl font-bold text-slate-800">Giải đáp & Tư vấn kịp thời</h2>
+                    </div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/E6M563th.jpg"
+                        alt="Financial Consulting" class="rounded-lg my-4 h-48 w-full object-cover">
+                    <div class="text-slate-600 text-base space-y-3">
+                        <div class="flex items-start">
+                            <i class="material-icons text-lg text-blue-500 mt-1 mr-2">check_circle</i>
+                            <p><strong class="font-semibold text-slate-700">Tư vấn chuyên sâu:</strong> Cung cấp phân
+                                tích sâu sắc về tình hình tài chính, giúp doanh nghiệp đưa ra quyết định chiến lược sáng
+                                suốt và hiệu quả.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="material-icons text-lg text-blue-500 mt-1 mr-2">check_circle</i>
+                            <p><strong class="font-semibold text-slate-700">Giải đáp kịp thời:</strong> Luôn sẵn sàng
+                                lắng nghe và giải đáp mọi thắc mắc về kế toán, thuế một cách nhanh chóng, rõ ràng và
+                                chính xác.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Hỗ trợ toàn diện -->
+                <div class="w-1/2 flex flex-col bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <i class="material-icons text-4xl text-green-600">support</i>
+                        <h2 class="text-2xl font-bold text-slate-800">Hỗ trợ toàn diện & liên tục</h2>
+                    </div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/JJpSvna7.jpg"
+                        alt="Financial Data Security" class="rounded-lg my-4 h-48 w-full object-cover">
+                    <div class="text-slate-600 text-base space-y-3">
+                        <div class="flex items-start">
+                            <i class="material-icons text-lg text-green-500 mt-1 mr-2">check_circle</i>
+                            <p><strong class="font-semibold text-slate-700">Đồng hành toàn diện:</strong> Không chỉ cung
+                                cấp dịch vụ, chúng tôi còn đồng hành cùng khách hàng trong suốt quá trình hoạt động, từ
+                                chứng từ đến báo cáo.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="material-icons text-lg text-green-500 mt-1 mr-2">check_circle</i>
+                            <p><strong class="font-semibold text-slate-700">Hỗ trợ liên tục:</strong> Đảm bảo mọi vấn đề
+                                phát sinh được xử lý kịp thời, giúp doanh nghiệp giảm thiểu rủi ro pháp lý và tập trung
+                                vào kinh doanh cốt lõi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card phụ: Nền tảng tin cậy -->
+            <div class="mt-6 bg-gradient-to-r from-slate-700 to-slate-900 text-white p-5 rounded-xl shadow-lg">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="material-icons text-3xl">verified</i>
+                    <h3 class="text-xl font-bold">Chất lượng dịch vụ - Nền tảng của sự tin cậy</h3>
+                </div>
+                <div class="flex justify-around text-center">
+                    <div class="flex flex-col items-center">
+                        <span class="text-sm font-semibold bg-sky-500 text-white px-3 py-1 rounded-full">MINH
+                            BẠCH</span>
+                        <p class="text-xs mt-1 text-slate-300">Quy trình rõ ràng, công khai</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-sm font-semibold bg-emerald-500 text-white px-3 py-1 rounded-full">TIN
+                            CẬY</span>
+                        <p class="text-xs mt-1 text-slate-300">Chính xác, an toàn dữ liệu</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-sm font-semibold bg-amber-500 text-white px-3 py-1 rounded-full">LIÊN
+                            TỤC</span>
+                        <p class="text-xs mt-1 text-slate-300">Hỗ trợ không ngừng nghỉ</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-sm font-semibold bg-indigo-500 text-white px-3 py-1 rounded-full">TOÀN
+                            DIỆN</span>
+                        <p class="text-xs mt-1 text-slate-300">Bao quát mọi khía cạnh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        var chartDom = document.getElementById('cost-comparison-chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            title: {
+                text: 'So sánh Chi phí Kế toán (Ước tính/tháng)',
+                left: 'center',
+                textStyle: {
+                    color: '#001f3f',
+                    fontSize: 16
+                }
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function (params) {
+                    return params[0].name + '<br/>' + params[0].seriesName + ': ' + params[0].value.toLocaleString('vi-VN') + ' VNĐ';
+                }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Dịch vụ Trọn gói', 'Kế toán Nội bộ'],
+                axisLabel: {
+                    color: '#001f3f'
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: 'VNĐ',
+                nameTextStyle: {
+                    color: '#001f3f'
+                },
+                axisLabel: {
+                    color: '#001f3f',
+                    formatter: function (value) {
+                        if (value >= 1000000) {
+                            return (value / 1000000) + ' Tr';
+                        }
+                        return value;
+                    }
+                }
+            },
+            series: [
+                {
+                    name: 'Chi phí',
+                    type: 'bar',
+                    data: [1000000, 15000000],
+                    itemStyle: {
+                        color: function (params) {
+                            var colorList = ['#3b82f6', '#4ade80']; // blue, green
+                            return colorList[params.dataIndex];
+                        }
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: function (params) {
+                            return (params.value / 1000000).toFixed(1).replace('.0', '') + ' Tr';
+                        },
+                        color: '#001f3f'
+                    }
+                }
+            ],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            }
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+
 </body>
 
 </html>

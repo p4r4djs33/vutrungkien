@@ -4,10 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Dịch Vụ - Kế Toán 24h</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://agnes-cdn.kiwiar.com/website/js/npm/echarts.min.js"></script>
+  <style>
     .main-nav-bar ul li a {
       color: #1f365c;
       font-weight: bold;
@@ -38,88 +44,499 @@
 </head>
 
 <body>
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-left">
+  <!-- Top bar -->
+  <div class="bg-[#1f365c] text-white text-sm py-2">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4">
+      <div>
         <span><i class="fa fa-clock-o"></i> Làm việc: Thứ 2 - Thứ 7: 7AM - 5PM</span>
-        <span><i class="fa fa-map-marker"></i> Thành Phố Tuyên Quang</span>
+        <span class="ml-4"><i class="fa fa-map-marker"></i> Thành Phố Tuyên Quang</span>
       </div>
-      <div class="top-right">
-        <a href="https://www.facebook.com/" target="_blank" class="facebook" title="Facebook"><i
-            class="fa fa-facebook"></i></a>
-        <a href="#" target="_blank" class="linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="https://dichvuketoan24h.com/feed" target="_blank" class="rss" title="RSS"><i class="fa fa-rss"></i></a>
-        <a href="#" target="_blank" class="youtube" title="YouTube"><i class="fa fa-youtube"></i></a>
+      <div>
+        <a href="https://www.facebook.com/" target="_blank" class="mx-1"><i class="fa fa-facebook"></i></a>
+        <a href="#" target="_blank" class="mx-1"><i class="fa fa-linkedin"></i></a>
+        <a href="https://dichvuketoan24h.com/feed" target="_blank" class="mx-1"><i class="fa fa-rss"></i></a>
+        <a href="#" target="_blank" class="mx-1"><i class="fa fa-youtube"></i></a>
       </div>
     </div>
   </div>
-
-  <header>
-    <div class="container">
-      <div class="branding-row"
-        style="display: flex; align-items: center; justify-content: space-between; padding: 30px 0;">
-        <div class="branding" style="display: flex; align-items: center;">
-          <h1 class="logo">Kế Toán 24h</h1>
-        </div>
-        <div class="hotline" style="text-align: right;">
-          <span style="font-size: 17px; color: #ffb536;">Tư Vấn Miễn Phí!</span><br>
-          <span style="font-size: 38px; color: #1f365c; font-weight: bold;">0911 553 699
-          </span>
-        </div>
+  <!-- Header -->
+  <header class="bg-white w-full shadow">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6">
+      <div class="text-2xl font-bold text-[#1f365c]">Kế Toán 24h</div>
+      <div class="text-right">
+        <span class="block text-[#ffb536] text-base">Tư Vấn Miễn Phí!</span>
+        <span class="block text-[#1f365c] text-3xl font-bold">0911 553 699</span>
       </div>
-      <nav class="main-nav-bar">
-        <ul
-          style="display: flex; justify-content: center; align-items: center; list-style: none; padding: 0; margin: 0;">
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="index.html"><i class="fa fa-home"></i> Trang chủ</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a>
-          </li>
-          <li style="padding: 0 30px; border-right: 1px solid #e0e0e0;">
-            <a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a>
-          </li>
-          <li style="padding: 0 30px;">
-            <a href="contact.html"><i class="fa fa-phone-square"></i> Liên hệ</a>
-          </li>
-          <li style="padding: 0 30px; color: #888;">
-            Tìm Kiếm
-          </li>
-        </ul>
-      </nav>
     </div>
+    <!-- Navigation bar -->
+    <nav class="bg-white border-t">
+      <ul
+        class="flex justify-center items-center max-w-7xl mx-auto px-4 py-2 space-x-8 text-[#1f365c] font-bold text-base">
+        <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li><a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a></li>
+        <li><a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a></li>
+        <li><a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+        <li><a href="contact.html"><i class="fa fa-phone-square"></i> Liên hệ</a></li>
+        <li class="text-[#888]">Tìm Kiếm</li>
+      </ul>
+    </nav>
   </header>
   <section class="services-page">
-    <div class="container">
-      <h2>Dịch vụ của chúng tôi</h2>
-      <div class="grid-3">
-        <div class="service-box">
-          <h3>Kê khai thuế</h3>
-          <p>Hỗ trợ doanh nghiệp kê khai và nộp thuế định kỳ đúng quy định.</p>
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center">Dịch vụ của chúng tôi</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(0)">
+            <h3 class="text-xl font-semibold mb-2">Dịch vụ kế toán trọn gói & Sổ sách kế toán</h3>
+            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+              <li>Tuân thủ pháp luật</li>
+              <li>Tiết kiệm chi phí</li>
+              <li>Tối ưu hóa tài chính</li>
+              <li>Tập trung kinh doanh</li>
+              <li>Minh bạch, rõ ràng</li>
+            </ul>
+          </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(1)">
+          <h3 class="text-xl font-semibold mb-2">Dịch vụ Hoàn thuế GTGT & Hoàn thuế TNCN</h3>
+            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+              <li>Hoàn lại số tiền thuế đã nộp thừa</li>
+              <li>Tiết kiệm thời gian và công sức</li>
+              <li>Tránh sai sót</li>
+              <li>Có dòng tiền sớm hơn</li>
+            </ul>
         </div>
-        <div class="service-box">
-          <h3>Báo cáo tài chính</h3>
-          <p>Lập và nộp BCTC theo chuẩn mực kế toán Việt Nam.</p>
-        </div>
-        <div class="service-box">
-          <h3>Tư vấn pháp lý</h3>
-          <p>Hướng dẫn thủ tục thuế, hóa đơn, doanh nghiệp.</p>
+        <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(2)">
+          <h3 class="text-xl font-semibold mb-2">Dịch vụ Quyết toán thuế & Báo cáo tài chính</h3>
+            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+              <li>Tuân thủ quy định</li>
+              <li>Phản ánh chính xác</li>
+              <li>Tối ưu thuế</li>
+              <li>Giải trình hiệu quả</li>
+              <li>Tiết kiệm thời gian, nhân lực</li>
+            </ul>
         </div>
       </div>
     </div>
   </section>
 
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
+  <!-- Modal Popup -->
+  <div id="service-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl w-full relative overflow-y-auto" style="max-height: 90vh;">
+      <button onclick="closeServiceModal()"
+        class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+      <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+      <div id="modal-content" class="text-base text-gray-700"></div>
+    </div>
+  </div>
+
+  <script>
+    const serviceDetailsHTML1 = `
+    <div class="max-w-7xl mx-auto px-4 py-12 w-full">
+      <div class="slide flex flex-col">
+        <div class="flex items-center mb-4">
+          <h1 class="text-4xl font-bold navy-blue">Dịch vụ kế toán trọn gói & Sổ sách kế toán</h1>
+        </div>
+        <div class="mt-6 p-4 border-t-2 border-slate-200">
+          <h3 class="text-2xl font-semibold navy-blue flex items-center mb-4">
+            <span class="material-icons text-4xl mr-2 text-orange-500">trending_up</span>
+            Tối ưu chi phí vận hành
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3 flex flex-col justify-center">
+              <div class="bg-blue-100 text-blue-800 p-2 rounded-lg flex items-center"><span class="font-bold mr-2">Chính xác:</span> Đảm bảo số liệu kế toán chuẩn xác, tránh sai sót.</div>
+              <div class="bg-green-100 text-green-800 p-2 rounded-lg flex items-center"><span class="font-bold mr-2">Minh bạch:</span> Báo cáo rõ ràng, dễ hiểu, phục vụ quản lý hiệu quả.</div>
+              <div class="bg-purple-100 text-purple-800 p-2 rounded-lg flex items-center"><span class="font-bold mr-2">Kịp thời:</span> Cung cấp thông tin nhanh chóng, đáp ứng yêu cầu vận hành.</div>
+              <div class="bg-yellow-100 text-yellow-800 p-2 rounded-lg flex items-center"><span class="font-bold mr-2">Chuyên nghiệp:</span> Đội ngũ chuyên gia giàu kinh nghiệm xử lý nghiệp vụ.</div>
+            </div>
+            <div id="cost-comparison-chart" style="width: 100%; height: 220px;"></div>
+          </div>
+        </div>
+        <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col p-4 rounded-lg bg-slate-50">
+            <h2 class="text-2xl font-semibold navy-blue flex items-center mb-3">
+              <span class="material-icons text-4xl mr-2 text-blue-800">handshake</span>
+              Giải pháp Kế toán Toàn diện A-Z
+            </h2>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/nJcF98SU.jpg"
+              alt="Financial Report Illustration" class="rounded-lg mb-4 w-full h-48 object-cover">
+            <div class="text-base text-slate-700 space-y-3">
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-blue-600">receipt_long</span>
+                <p><strong>Tổng quan dịch vụ:</strong> Ghi chép, xử lý và báo cáo thông tin tài chính, từ thu thập chứng từ đến lập báo cáo tài chính cuối năm.</p>
+              </div>
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-blue-600">menu_book</span>
+                <p><strong>Quản lý sổ sách:</strong> Thiết lập và quản lý hệ thống sổ sách kế toán, soạn thảo báo cáo thuế, biểu mẫu phân bổ, khấu hao theo đúng quy định.</p>
+              </div>
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-blue-600">add_circle_outline</span>
+                <p><strong>Dịch vụ bổ sung:</strong> Hỗ trợ các nghiệp vụ chuyên sâu như kế toán trưởng, hỗ trợ kiểm toán khi cần thiết.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col p-4 rounded-lg bg-slate-50">
+            <h2 class="text-2xl font-semibold navy-blue flex items-center mb-3">
+              <span class="material-icons text-4xl mr-2 text-green-600">check_circle</span>
+              Đảm bảo Chính xác & Minh bạch
+            </h2>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/f6G4x3VY.jpg"
+              alt="Professional Accountant Illustration" class="rounded-lg mb-4 w-full h-48 object-cover">
+            <div class="text-base text-slate-700 space-y-3">
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-green-500">task_alt</span>
+                <p><strong>Đảm bảo số liệu chính xác:</strong> Cung cấp thông tin toàn diện về tình hình tài chính, kinh doanh, và luồng tiền, tuân thủ pháp luật.</p>
+              </div>
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-green-500">analytics</span>
+                <p><strong>Minh bạch và kịp thời:</strong> Dữ liệu được xử lý nhanh chóng, cung cấp báo cáo kịp thời để phân tích và đánh giá hiệu suất hoạt động.</p>
+              </div>
+              <div class="flex">
+                <span class="material-icons text-xl mr-2 text-green-500">shield</span>
+                <p><strong>Giảm thiểu rủi ro:</strong> Giúp doanh nghiệp tránh các sai sót và rủi ro phạt hành chính do không tuân thủ quy định.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>`;
+
+
+    const serviceDetailsHTML2=`<div class="max-w-7xl mx-auto px-4 py-12 w-full">
+        <div class="slide flex flex-col" style="background-color: #f7fafc;">
+            <div class="w-full">
+                <h1 class="text-4xl font-bold text-gray-800 mb-8 text-left">Dịch vụ Hoàn thuế GTGT & Hoàn thuế TNCN</h1>
+            </div>
+
+            <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: VAT Refund -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons text-4xl text-blue-600 mr-3">analytics</span>
+                        <h3 class="text-xl font-semibold text-blue-900">Phân tích & Tư vấn Quy trình Hoàn thuế GTGT</h3>
+                    </div>
+                    <div class="text-gray-700 text-sm flex-grow">
+                        <p class="mb-3">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Phân
+                                tích chuyên sâu</span>
+                            Đánh giá điều kiện, đối tượng và trường hợp được hoàn thuế GTGT, kiểm tra tính hợp lệ của
+                            hóa
+                            đơn, chứng từ.
+                        </p>
+                        <p>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Tư
+                                vấn quy trình</span>
+                            Hướng dẫn chi tiết các bước chuẩn bị hồ sơ, thủ tục nộp và giải trình, đảm bảo tuân thủ pháp
+                            lý.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: PIT Refund -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons text-4xl text-green-600 mr-3">checklist_rtl</span>
+                        <h3 class="text-xl font-semibold text-blue-900">Hướng dẫn Hồ sơ & Thủ tục Hoàn thuế TNCN</h3>
+                    </div>
+                    <div class="text-gray-700 text-sm flex-grow">
+                        <p class="mb-3">
+                            <span
+                                class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hoàn
+                                thuế cá nhân</span>
+                            Cung cấp hướng dẫn cụ thể về điều kiện, quy trình hoàn thuế TNCN, kiểm tra thu nhập và các
+                            khoản
+                            giảm trừ.
+                        </p>
+                        <p>
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hỗ
+                                trợ hồ sơ</span>
+                            Hướng dẫn chuẩn bị đầy đủ chứng từ khấu trừ thuế, giấy tờ người phụ thuộc, đảm bảo hồ sơ
+                            chính
+                            xác, nhanh chóng.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Client Representation -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons text-4xl text-yellow-600 mr-3">groups</span>
+                        <h3 class="text-xl font-semibold text-blue-900">Đại diện Khách hàng làm việc với Cơ quan Thuế
+                        </h3>
+                    </div>
+                    <div class="text-gray-700 text-sm flex-grow">
+                        <p class="mb-3">
+                            <span
+                                class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Thay
+                                mặt khách hàng</span>
+                            Nộp hồ sơ, theo dõi sát sao tiến độ và đại diện khách hàng làm việc trực tiếp tại cơ quan
+                            thuế.
+                        </p>
+                        <p>
+                            <span
+                                class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Giải
+                                trình & Đối thoại</span>
+                            Tiến hành giải trình, bổ sung hồ sơ và giải quyết các vướng mắc phát sinh một cách nhanh
+                            chóng,
+                            hiệu quả.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Maximizing Benefits -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons text-4xl text-red-600 mr-3">payments</span>
+                        <h3 class="text-xl font-semibold text-blue-900">Đảm bảo Quyền lợi Hoàn thuế Tối đa</h3>
+                    </div>
+                    <div class="text-gray-700 text-sm flex-grow">
+                        <p class="mb-3">
+                            <span
+                                class="bg-cyan-100 text-cyan-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Tối
+                                ưu hóa lợi ích</span>
+                            Mục tiêu hàng đầu là giúp khách hàng nhận được số tiền hoàn thuế tối đa theo đúng quy định
+                            pháp
+                            luật.
+                        </p>
+                        <p>
+                            <span
+                                class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">An
+                                tâm tuyệt đối</span>
+                            Giảm thiểu rủi ro phát sinh, đảm bảo sự an tâm cho doanh nghiệp và cá nhân trong suốt quá
+                            trình
+                            hoàn thuế.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+
+
+    const serviceDetailsHTML3 = `<div class="max-w-7xl mx-auto px-4 py-12 w-full">
+
+        <div class="slide bg-white text-gray-800">
+            <!-- Main Title -->
+            <h1 class="text-4xl font-bold text-blue-900 mb-6 text-left">Dịch vụ Quyết toán thuế & Báo cáo tài chính</h1>
+
+            <!-- Main Content: Two Columns -->
+            <div class="flex-grow flex gap-8">
+
+                <!-- Left Column: Tax Services -->
+                <div class="w-1/2 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="material-icons text-3xl text-blue-900">gavel</i>
+                        <h2 class="text-2xl font-semibold text-blue-900">Quyết toán thuế & Tối ưu hóa nghĩa vụ thuế</h2>
+                    </div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/bGzPvA3V.jpg"
+                        alt="Tax Compliance Illustration" class="rounded-lg shadow-md w-full h-48 object-cover mb-4">
+                    <div class="text-gray-700 text-base flex flex-col gap-2">
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Lập và nộp báo cáo quyết toán thuế:</strong> Thực hiện lập và nộp báo cáo quyết
+                                toán thuế TNDN và TNCN theo đúng quy định, đảm bảo hồ sơ đầy đủ, chính xác.</div>
+                        </div>
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Kiểm tra và đối chiếu:</strong> Rà soát toàn bộ hóa đơn, chứng từ, sổ sách kế
+                                toán để đảm bảo tính hợp lệ, hợp pháp trước khi quyết toán.</div>
+                        </div>
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Tư vấn tối ưu hóa thuế hợp pháp:</strong> Cung cấp tư vấn chuyên sâu về chính
+                                sách, ưu đãi thuế để giúp doanh nghiệp giảm thiểu gánh nặng thuế hiệu quả.</div>
+                        </div>
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Đại diện làm việc với cơ quan thuế:</strong> Thay mặt doanh nghiệp giải trình,
+                                bảo vệ quyền lợi hợp pháp của doanh nghiệp trước cơ quan nhà nước.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Financial Reporting Services -->
+                <div class="w-1/2 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="material-icons text-3xl text-blue-900">insights</i>
+                        <h2 class="text-2xl font-semibold text-blue-900">Báo cáo tài chính & Đảm bảo chính xác</h2>
+                    </div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/5nChYtNE.jpg"
+                        alt="Financial Report Illustration" class="rounded-lg shadow-md w-full h-48 object-cover mb-4">
+                    <div class="text-gray-700 text-base flex flex-col gap-2">
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Hỗ trợ lập báo cáo tài chính định kỳ và đột xuất:</strong> Lập đầy đủ các loại
+                                báo cáo tài chính (quý, năm) và báo cáo đột xuất theo yêu cầu quản trị.</div>
+                        </div>
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Đảm bảo tính chính xác và tuân thủ chuẩn mực:</strong> Cam kết số liệu chính
+                                xác và tuân thủ nghiêm ngặt Chuẩn mực kế toán Việt Nam (VAS).</div>
+                        </div>
+                        <div class="sub-paragraph">
+                            <i class="material-icons">check_circle_outline</i>
+                            <div><strong>Phân tích tình hình tài chính:</strong> Cung cấp phân tích chuyên sâu về hiệu
+                                quả hoạt động và dòng tiền, giúp ban lãnh đạo đưa ra quyết định chiến lược.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appended Content Card: Core Values -->
+            <div class="mt-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="material-icons text-2xl text-blue-900">verified</i>
+                    <h3 class="text-xl font-semibold text-blue-900">Giá trị cốt lõi</h3>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="w-3/5">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-blue-100 text-blue-800 p-3 rounded-lg text-center"><span
+                                    class="font-bold text-sm">TUÂN THỦ</span>
+                                <p class="text-xs">Đảm bảo mọi hoạt động đúng luật.</p>
+                            </div>
+                            <div class="bg-green-100 text-green-800 p-3 rounded-lg text-center"><span
+                                    class="font-bold text-sm">CHÍNH XÁC</span>
+                                <p class="text-xs">Số liệu minh bạch, tin cậy tuyệt đối.</p>
+                            </div>
+                            <div class="bg-yellow-100 text-yellow-800 p-3 rounded-lg text-center"><span
+                                    class="font-bold text-sm">TỐI ƯU</span>
+                                <p class="text-xs">Giúp doanh nghiệp tiết kiệm chi phí.</p>
+                            </div>
+                            <div class="bg-purple-100 text-purple-800 p-3 rounded-lg text-center"><span
+                                    class="font-bold text-sm">AN TÂM</span>
+                                <p class="text-xs">Loại bỏ rủi ro pháp lý.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-2/5 flex items-center gap-4 pl-4 border-l border-gray-200">
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/proxy-images-sg/online_files/GdTwXA6H.jpg"
+                            alt="Financial Growth Chart" class="w-24 h-24 object-cover rounded-lg">
+                        <div class="text-gray-800">
+                            <p class="font-semibold">"Dịch vụ báo cáo tài chính cuối năm trọn gói chỉ từ <span
+                                    class="text-blue-600">3.000.000 VNĐ</span>."</p>
+                            <p class="text-xs text-gray-500 mt-1">Nguồn: EcomTax.vn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`
+
+    function showServiceModal(index) {
+      if (index === 0) {
+        document.getElementById('modal-content').innerHTML = serviceDetailsHTML1;
+        document.getElementById('service-modal').classList.remove('hidden');
+        // Đợi nội dung render xong rồi vẽ chart
+        setTimeout(function () {
+          var chartDom = document.getElementById('cost-comparison-chart');
+          if (chartDom) {
+            var myChart = echarts.init(chartDom);
+            var option = {
+              title: {
+                text: 'So sánh Chi phí Kế toán (Ước tính/tháng)',
+                left: 'center',
+                textStyle: {
+                  color: '#001f3f',
+                  fontSize: 16
+                }
+              },
+              tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' },
+                formatter: function (params) {
+                  return params[0].name + '<br/>' + params[0].seriesName + ': ' + params[0].value.toLocaleString('vi-VN') + ' VNĐ';
+                }
+              },
+              xAxis: {
+                type: 'category',
+                data: ['Dịch vụ Trọn gói', 'Kế toán Nội bộ'],
+                axisLabel: { color: '#001f3f' }
+              },
+              yAxis: {
+                type: 'value',
+                name: 'VNĐ',
+                nameTextStyle: { color: '#001f3f' },
+                axisLabel: {
+                  color: '#001f3f',
+                  formatter: function (value) {
+                    if (value >= 1000000) {
+                      return (value / 1000000) + ' Tr';
+                    }
+                    return value;
+                  }
+                }
+              },
+              series: [{
+                name: 'Chi phí',
+                type: 'bar',
+                data: [1000000, 15000000],
+                itemStyle: {
+                  color: function (params) {
+                    var colorList = ['#3b82f6', '#4ade80'];
+                    return colorList[params.dataIndex];
+                  }
+                },
+                label: {
+                  show: true,
+                  position: 'top',
+                  formatter: function (params) {
+                    return (params.value / 1000000).toFixed(1).replace('.0', '') + ' Tr';
+                  },
+                  color: '#001f3f'
+                }
+              }],
+              grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+              }
+            };
+            myChart.setOption(option);
+          }
+        }, 100);
+
+      
+      } else if (index === 1) {
+        document.getElementById('modal-content').innerHTML = serviceDetailsHTML2;
+        document.getElementById('service-modal').classList.remove('hidden');
+      } else if (index === 2) {
+        document.getElementById('modal-content').innerHTML = serviceDetailsHTML3;
+        document.getElementById('service-modal').classList.remove('hidden');
+      }
+      
+      else {
+        document.getElementById('modal-title').innerText = "Dịch vụ khác";
+        document.getElementById('modal-content').innerHTML = "<p>Thông tin dịch vụ đang được cập nhật...</p>";
+        document.getElementById('service-modal').classList.remove('hidden');
+      }
+    }
+
+    function closeServiceModal() {
+      document.getElementById('service-modal').classList.add('hidden');
+    }
+
+    // Đóng modal khi click ra ngoài
+    document.getElementById('service-modal').addEventListener('click', function (e) {
+      if (e.target === this) closeServiceModal();
     });
-</script>
+
+  </script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
 </body>
 
 </html>
