@@ -44,76 +44,47 @@
 </head>
 
 <body>
-  <!-- Top bar -->
-  <div class="bg-[#1f365c] text-white text-sm py-2">
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-4">
-      <div>
-        <span><i class="fa fa-clock-o"></i> Làm việc: Thứ 2 - Thứ 7: 7AM - 5PM</span>
-        <span class="ml-4"><i class="fa fa-map-marker"></i> Thành Phố Tuyên Quang</span>
-      </div>
-      <div>
-        <a href="https://www.facebook.com/" target="_blank" class="mx-1"><i class="fa fa-facebook"></i></a>
-        <a href="#" target="_blank" class="mx-1"><i class="fa fa-linkedin"></i></a>
-        <a href="#" target="_blank" class="mx-1"><i class="fa fa-rss"></i></a>
-        <a href="#" target="_blank" class="mx-1"><i class="fa fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-  <!-- Header -->
-  <header class="bg-white w-full shadow">
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6">
-      <div class="text-2xl font-bold text-[#1f365c]">Kế Toán TCP</div>
-      <div class="text-right">
-        <span class="block text-[#ffb536] text-base">Tư Vấn Miễn Phí!</span>
-        <span class="block text-[#1f365c] text-3xl font-bold">0911 553 699</span>
-      </div>
-    </div>
-    <!-- Navigation bar -->
-    <nav class="bg-white border-t">
-      <ul
-        class="flex justify-center items-center max-w-7xl mx-auto px-4 py-2 space-x-8 text-[#1f365c] font-bold text-base">
-        <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
-        <li><a href="introduce.html"><i class="fa fa-address-card"></i> Giới Thiệu</a></li>
-        <li><a href="services.html"><i class="fa fa-folder-open"></i> Dịch Vụ</a></li>
-        <li><a href="blog.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
-        <li><a href="contact.html"><i class="fa fa-phone-square"></i> Liên hệ</a></li>
-        <li class="text-[#888]">Tìm Kiếm</li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+      });
+  </script>
   <section class="services-page">
     <div class="max-w-7xl mx-auto px-4 py-12">
       <h2 class="text-3xl font-bold mb-8 text-center">Dịch vụ của chúng tôi</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(0)">
-            <h3 class="text-xl font-semibold mb-2">Dịch vụ kế toán trọn gói & Sổ sách kế toán</h3>
-            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
-              <li>Tuân thủ pháp luật</li>
-              <li>Tiết kiệm chi phí</li>
-              <li>Tối ưu hóa tài chính</li>
-              <li>Tập trung kinh doanh</li>
-              <li>Minh bạch, rõ ràng</li>
-            </ul>
-          </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(0)">
+          <h3 class="text-xl font-semibold mb-2">Dịch vụ kế toán trọn gói & Sổ sách kế toán</h3>
+          <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+            <li>Tuân thủ pháp luật</li>
+            <li>Tiết kiệm chi phí</li>
+            <li>Tối ưu hóa tài chính</li>
+            <li>Tập trung kinh doanh</li>
+            <li>Minh bạch, rõ ràng</li>
+          </ul>
+        </div>
         <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(1)">
           <h3 class="text-xl font-semibold mb-2">Dịch vụ Hoàn thuế GTGT & Hoàn thuế TNCN</h3>
-            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
-              <li>Hoàn lại số tiền thuế đã nộp thừa</li>
-              <li>Tiết kiệm thời gian và công sức</li>
-              <li>Tránh sai sót</li>
-              <li>Có dòng tiền sớm hơn</li>
-            </ul>
+          <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+            <li>Hoàn lại số tiền thuế đã nộp thừa</li>
+            <li>Tiết kiệm thời gian và công sức</li>
+            <li>Tránh sai sót</li>
+            <li>Có dòng tiền sớm hơn</li>
+          </ul>
         </div>
         <div class="bg-white rounded-xl shadow p-6 text-center cursor-pointer" onclick="showServiceModal(2)">
           <h3 class="text-xl font-semibold mb-2">Dịch vụ Quyết toán thuế & Báo cáo tài chính</h3>
-            <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
-              <li>Tuân thủ quy định</li>
-              <li>Phản ánh chính xác</li>
-              <li>Tối ưu thuế</li>
-              <li>Giải trình hiệu quả</li>
-              <li>Tiết kiệm thời gian, nhân lực</li>
-            </ul>
+          <ul class="list-disc text-left pl-6 space-y-2 text-base text-slate-700">
+            <li>Tuân thủ quy định</li>
+            <li>Phản ánh chính xác</li>
+            <li>Tối ưu thuế</li>
+            <li>Giải trình hiệu quả</li>
+            <li>Tiết kiệm thời gian, nhân lực</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -202,7 +173,7 @@
     </div>`;
 
 
-    const serviceDetailsHTML2=`<div class="max-w-7xl mx-auto px-4 py-12 w-full">
+    const serviceDetailsHTML2 = `<div class="max-w-7xl mx-auto px-4 py-12 w-full">
         <div class="slide flex flex-col" style="background-color: #f7fafc;">
             <div class="w-full">
                 <h1 class="text-4xl font-bold text-gray-800 mb-8 text-left">Dịch vụ Hoàn thuế GTGT & Hoàn thuế TNCN</h1>
@@ -502,7 +473,7 @@
           }
         }, 100);
 
-      
+
       } else if (index === 1) {
         document.getElementById('modal-content').innerHTML = serviceDetailsHTML2;
         document.getElementById('service-modal').classList.remove('hidden');
@@ -510,7 +481,7 @@
         document.getElementById('modal-content').innerHTML = serviceDetailsHTML3;
         document.getElementById('service-modal').classList.remove('hidden');
       }
-      
+
       else {
         document.getElementById('modal-title').innerText = "Dịch vụ khác";
         document.getElementById('modal-content').innerHTML = "<p>Thông tin dịch vụ đang được cập nhật...</p>";
